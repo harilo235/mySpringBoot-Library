@@ -15,7 +15,7 @@ import javax.persistence.Table;
 public class Book implements Serializable {
 	
 	@Id
-	private int bookId;
+	private String bookId;
 	private String bookName;
 	
 	@OneToOne(mappedBy = "book" , cascade = {CascadeType.ALL})
@@ -26,11 +26,11 @@ public class Book implements Serializable {
 	@JoinColumn(name = "subId" , nullable = false)
 	SubClassification subClassification;
 
-	public int getBookId() {
+	public String getBookId() {
 		return bookId;
 	}
 
-	public void setBookId(int bookId) {
+	public void setBookId(String bookId) {
 		this.bookId = bookId;
 	}
 

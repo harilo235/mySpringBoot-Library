@@ -19,17 +19,17 @@ public class MainClassification implements Serializable {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long mainId;
+	private String mainId;
 	private String mainName;
 	
 	@OneToMany(mappedBy="mainclassification" , cascade= {CascadeType.ALL})
 	private List<SubClassification> subClassification;
 	
-	public Long getMainId() {
+	public String getMainId() {
 		return mainId;
 	}
 
-	public void setMainId(Long mainId) {
+	public void setMainId(String mainId) {
 		this.mainId = mainId;
 	}
 
