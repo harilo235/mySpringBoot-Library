@@ -13,7 +13,6 @@ public class MainClassServiceImpl implements MainClassService {
 
 	@Autowired
 	MainClassificationRepository mainClassRepository;
-	@Override
 	public void saveMainClassification(MainClassification mainClass) {
 		mainClassRepository.save(mainClass);
 	}

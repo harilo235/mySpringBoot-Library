@@ -22,10 +22,10 @@ public class BookServiceImpl implements BookService {
 		return bookRepository.findAll();
 	}
 
-//	@Override
-//	public Book getBookById(String id) {
-//		return bookRepository.findBookById(id);
-//	}
+	@Override
+	public Book getBookById(String id) {
+		return bookRepository.findBookById(id);
+	}
 
 	@Override
 	public Book deleteBookById(String id) {
@@ -35,7 +35,26 @@ public class BookServiceImpl implements BookService {
 
 	@Override
 	public void updateBook(Book book) {
-		
+		String bookId = book.getBookId();
+		boolean isExist = bookRepository.findBookById(bookId) != null;
+		if(isExist) {
+			bookRepository.save(book);
+		}
+	}
+
+	@Override
+	public List<Book> getBookByMainId(String mainId) {
+		return bookRepository.findBookByMainId(mainId);
+	}
+
+	@Override
+	public List<Book> getBookBySubId(String subId) {
+		return bookRepository.findBookBySubId(subId);
+	}
+
+	@Override
+	public List<Book> getBookByBookName(String bookName) {
+		return bookRepository.findBookByBookName(bookName);
 	}
 
 

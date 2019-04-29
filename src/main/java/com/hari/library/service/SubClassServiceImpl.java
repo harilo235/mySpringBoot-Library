@@ -40,7 +40,7 @@ public class SubClassServiceImpl implements SubClassService {
 	}
 
 	@Override
-	public Object[] getSubClassNameByMainClassId(String mainId) {
+	public Object[] getSubClassNameByMainId(String mainId) {
 		Object[] getSubName = subClassRepository.fetchSubClassNameByMainClassId(mainId);
 		return getSubName;
 	}
@@ -59,5 +59,12 @@ public class SubClassServiceImpl implements SubClassService {
 		subClassRepository.deleteById(subId);
 		return null;
 	}
+
+	@Override
+	public Object[] getAllSubId() {
+		return null;
+	}
+
+
 
 }

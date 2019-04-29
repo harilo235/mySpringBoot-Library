@@ -6,7 +6,8 @@ import com.hari.library.entity.MainClassification;
 
 public interface MainClassService {
 	
-	void saveMainClassification (MainClassification mainClass);
+	static void saveMainClassification (MainClassification mainClass) {
+	}
 	List <MainClassification> getAllMainClass();
 	Object[] getAllMainClassId();
 	MainClassification getMainClassificationById(String mainClassId);

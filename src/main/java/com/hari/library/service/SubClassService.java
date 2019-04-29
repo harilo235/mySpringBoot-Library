@@ -12,7 +12,7 @@ public interface SubClassService {
 	SubClassification getSubClassificationById(String subId);
 	List<SubClassification> getSubClassificationBymainId(String mainId);
 	Object[] getSubClassName();
-	Object[]getSubClassNameByMainClassId(String mainId);
+	Object[]getSubClassNameByMainId(String mainId);
 	void updateSubClassification(SubClassification subClass);
 	SubClassification deleteSubClassById(String subId);
 
